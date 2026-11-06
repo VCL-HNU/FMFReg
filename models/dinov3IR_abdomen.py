@@ -77,7 +77,7 @@ class Dinov3IR(nn.Module):
 
         N_s = self.start_channel
         self.simple_encoder = nn.Sequential(
-            encoder(769,N_s,3,1,1),  # 去掉sam的时候改动了
+            encoder(769,N_s,3,1,1),  
             encoder(N_s,2*N_s,3,1,1),
             encoder(2*N_s,N_s,3,1,1),
             #
